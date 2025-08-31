@@ -2,7 +2,7 @@ namespace LeetCodeWithCSharp;
 
 public class Insert_Interval
 {
-    
+
     public List<Int32[]> MergeTwoEntries(Int32[] a, Int32[] b)
     {
         Int32[] left = a[0] <= b[0] ? a : b;
@@ -13,7 +13,7 @@ public class Insert_Interval
             int mergedEnd = Math.Max(left[1], right[1]);
             return new List<Int32[]> { new Int32[] { left[0], mergedEnd } };
         }
-        else 
+        else
         {
             return new List<Int32[]> { left, right };
         }

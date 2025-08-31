@@ -1,5 +1,57 @@
+# Build folders
 bin/
 obj/
-/packages/
-riderModule.iml
-/_ReSharper.Caches/
+
+# VS Code settings
+.vscode/
+
+# Visual Studio settings
+.vs/
+*.suo
+*.user
+*.rsuser
+*.sln.docstates
+
+# Rider settings
+.idea/
+*.sln.iml
+
+# Logs and diagnostics
+*.log
+*.crash
+*.dmp
+*.diagsession
+
+# User secrets and environment
+secrets.json
+.env
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Docker overrides
+docker-compose.override.yml
+
+# Node modules (if using frontend)
+node_modules/
+
+# Temporary files
+tmp/
+temp/
+*.bak
+*.swp
+*.lock
+
+# OS-specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Azure Pipelines
+.azuredevops/
+
+# Installer files
