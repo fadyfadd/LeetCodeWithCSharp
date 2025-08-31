@@ -21,8 +21,6 @@ public class Insert_IntervalTest
         
         Assert.Equal(new[] { 1, 5 }, result[0]);
         Assert.Equal(new[] {6, 9 }, result[1]);
-        
-
 
     }
 }
