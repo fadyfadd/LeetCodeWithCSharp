@@ -39,7 +39,6 @@ public class Merge_Sort
         
         return result.ToArray();
     }
-    
     public Int32[] MergeSort(Int32[] nums)
     {
         if (nums.Length <= 1)
