@@ -1,0 +1,20 @@
+# Archivos de compilación de C#
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.log
+*.user
+*.vs/
+*.vscode/
+
+# Archivos temporales de C# Script
+*.cache
+*.csx.csproj.user
+*.csx.dll
+*.csx.pdb
+
+# Paquetes NuGet
+*.nupkg
+packages/
