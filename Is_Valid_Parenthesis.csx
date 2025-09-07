@@ -1,6 +1,6 @@
 #r "nuget:xunit, 2.5.0"
 using Xunit;
-    
+
 public bool IsValidParenthesis(string s)
 {
 
@@ -19,7 +19,7 @@ public bool IsValidParenthesis(string s)
 
             if (c != ')' && c != '}' && c != ']')
                 continue;
-                
+
             var top = stack.Pop();
             if ((c == ')' && top != '(') ||
                 (c == '}' && top != '{') ||
@@ -33,12 +33,14 @@ public bool IsValidParenthesis(string s)
     return stack.Count == 0;
 }
 
-{       int[] nums = { 2, 7, 11, 15 };
-        int target = 9;
+{
+    string s = "[(1+2)*{3+4}]";
+    bool result = IsValidParenthesis(s);
+    Assert.True(result);
+}
 
-    
-        int[] result = _twoSum.TwoSum(nums, target);
-
-        Assert.Equal(new int[] { 0, 1 }, result);
-
+{
+    string s = "[(1+2)*{3+4]";
+    bool result = _validParenthesis.IsValidParenthesis(s);
+    Assert.False(result);
 }
