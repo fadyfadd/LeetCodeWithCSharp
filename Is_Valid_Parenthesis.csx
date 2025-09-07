@@ -41,6 +41,6 @@ public bool IsValidParenthesis(string s)
 
 {
     string s = "[(1+2)*{3+4]";
-    bool result = _validParenthesis.IsValidParenthesis(s);
+    bool result = IsValidParenthesis(s);
     Assert.False(result);
 }
