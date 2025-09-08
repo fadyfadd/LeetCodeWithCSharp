@@ -14,7 +14,7 @@ public class SerializeDeserializeBinaryTree
     public string serialize(TreeNode root)
     {
         if (root == null)
-            return "X,";
+            return "/,";
 
         return root.val + "," + serialize(root.left) + serialize(root.right);
     }
@@ -28,7 +28,7 @@ public class SerializeDeserializeBinaryTree
     private TreeNode DeserializeHelper(Queue<string> nodes)
     {
         string val = nodes.Dequeue();
-        if (val == "X")
+        if (val == "/")
             return null;
 
         TreeNode node = new TreeNode(int.Parse(val));
@@ -47,7 +47,7 @@ public class SerializeDeserializeBinaryTree
     root.right.right = new TreeNode(5);
 
     string serialized = codec.serialize(root);
-    Assert.Equal("1,2,X,X,3,4,X,X,5,X,X,", serialized);
+    Assert.Equal("1,2,/,/,3,4,/,/,5,/,/,", serialized);
 
     TreeNode deserializedRoot = codec.deserialize(serialized);
     Assert.Equal(1, deserializedRoot.val);
